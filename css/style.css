@@ -1,0 +1,166 @@
+html {
+    touch-action: manipulation;
+}
+
+body {
+    margin: 0;
+}
+
+#emotion-frame {
+    position: relative;
+    transition: all .5s;
+    margin: 0;
+    background-color: #fbbd10;
+}
+
+button {
+    border: none;
+    border-radius: 0.5em;
+    transition: 0.5s;
+    padding: 5px 15px;
+    margin: 30px auto 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+#debug {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    background-color: #f56666;
+    outline: none;
+    z-index: 1;
+}
+
+.fas {
+    font-size: 0.6em;
+    margin: 0 0.2em 0 0;
+    position: relative;
+    top: -0.2em;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    box-shadow: 0 0 3px 0px;
+    padding: 0.3em 0;
+}
+
+#refresh {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    opacity: 0;
+    font-size: 1em;
+    color: #333;
+    margin: 0.6em;
+}
+
+.container {
+    transition: 0.5s;
+    opacity: 1;
+    height: calc(100% - 4em);
+    background-color: #eee;
+}
+
+.container:before {
+    content: "";
+    position: absolute;
+    /* background-image: url(../img/background-image.jpg); */
+    /* filter: saturate(1); */
+    width: 100%;
+    height: 100%;
+}
+
+.config {
+    transition: 0.5s;
+    position: absolute;
+    width: 80%;
+    margin: 20% 5% 0;
+    left: 100%;
+    border: solid 1px #ccc;
+    border-radius: 18px;
+    padding: 5%;
+    background-color: #fff;
+}
+
+.box-title {
+    display: block;
+    margin: 1em 0 0.2em;
+    color: #999;
+}
+
+#my-id,
+#their-id {
+    width: 90%;
+    display: block;
+    margin: 0 0 1em;
+    height: 3em;
+    border: solid 1px #ccc;
+    border-radius: 0.5em;
+    padding: 1em;
+}
+
+#my-id,
+#their-id {
+    width: 70%;
+    float: left;
+    border-radius: 0.5em 0 0 0.5em;
+    border-right: none;
+    font-size: 1em;
+}
+
+#get-peer-id,
+#make-call {
+    float: left;
+    width: 30%;
+    height: 3em;
+    background: #fbbd10;
+    margin: 0 0 1em;
+    border-radius: 0 0.5em 0.5em 0;
+    border: solid 1px #ccc;
+    border-left: none;
+    outline: none;
+    font-size: 1em;
+}
+
+#make-call {
+    pointer-events: none;
+}
+
+.input-id {
+    margin: 0 0 100px;
+}
+
+.video-wrapper {
+    transition: 0.5s;
+    position: absolute;
+    width: 100%;
+    left: 100%;
+}
+
+video#their-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #111;
+}
+
+video#my-video {
+    position: absolute;
+    bottom: 0%;
+    background-color: #000;
+    max-width: 50%;
+    max-height: 20%;
+    z-index: 1;
+}
+
+@media (max-width: 480px) {
+    .config {
+        margin-top: 30%;
+    }
+}

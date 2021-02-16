@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/comment-solid.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <title>Hanasu</title>
+</head>
+
+<body>
+    <h1 id="emotion-frame"><i class="fas fa-comment"></i>Hanasu</h1>
+
+    <!-- Debug -->
+    <!-- <button id="debug">Debug</button> -->
+
+    <i id="refresh" class="fas fa-times"></i>
+    <div class="container">
+        <div class="config">
+            <div class="input-id">
+                <!-- （半角英数字：1~8字） -->
+                <span class="box-title">My ID</span>
+                <input id="my-id"></input>
+                <button id="get-peer-id">Check</button>
+            </div>
+            <div class="input-id">
+                <!-- （半角英数字：1~8字） -->
+                <span class="box-title">Their ID </span>
+                <input id="their-id"></input>
+                <button id="make-call">Start</button>
+            </div>
+        </div>
+        <div class="video-wrapper">
+            <video id="my-video" autoplay playsinline></video>
+            <video id="their-video" autoplay playsinline></video>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/detect-smile.js"></script>
+    <script src="js/face-api.min.js"></script>
+</body>
+
+</html>
